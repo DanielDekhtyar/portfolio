@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Accelerator Portfolio project by Daniel Dekhtyar.">
+    <title>AI Accelerator Portfolio | Daniel Dekhtyar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Md9W1xOzbIRbkIuAeGHNirMRqkRkNvztNFVQVw1Gc7YCOUMIqFZ3VAb9YSEuxsjjXNpMOGepQ/HgzQTd2JcH1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html#projects">Daniel Dekhtyar</a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="primary-navigation" class="nav-list">
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects" class="active">Projects</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                    <li><a href="../index.html#certifications">Certifications</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-nav">
+            <div class="container">
+                <a class="btn ghost back-home" href="../index.html#projects">&larr; Back to Main Page</a>
+            </div>
+        </div>
+        <section class="project-hero">
+            <div class="container project-layout">
+                <div>
+                    <span class="eyebrow">Project Case Study</span>
+                    <h1>Technion AI Accelerator Portfolio</h1>
+                    <p class="lead">A curated showcase of the applied machine learning solutions I engineered as part of Technion's AI Accelerator program—each targeting real-world business problems.</p>
+                </div>
+                <div>
+                    <img src="../assets/images/ai-accelerator.jpg" alt="Collection of AI accelerator notebooks and dashboards" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container project-body">
+                <div class="project-meta">
+                    <span><i class="fa-regular fa-calendar"></i> September 2024 – April 2025</span>
+                    <span><i class="fa-solid fa-user-gear"></i> Role: Lead ML Engineer (Technion Cohort)</span>
+                    <span><i class="fa-solid fa-building-columns"></i> Institution: Technion – Israel Institute of Technology</span>
+                    <span><i class="fa-solid fa-toolbox"></i> Stack: Python, TensorFlow, Pandas, Airflow</span>
+                </div>
+
+                <section>
+                    <h2>Overview</h2>
+                    <p>The portfolio aggregates seven production-ready experiments: demand forecasting, anomaly detection, LSTM-based stock prediction, NLP classification, and computer vision transfer-learning workflows optimized for low-latency inference.</p>
+                </section>
+
+                <section>
+                    <h2>Highlights</h2>
+                    <ul class="feature-list">
+                        <li>Built reproducible ML pipelines with MLflow tracking and automated hyper-parameter sweeps powered by Weights & Biases.</li>
+                        <li>Containerized training and inference environments, enabling frictionless deployment to AWS Fargate.</li>
+                        <li>Delivered stakeholder dashboards summarizing performance metrics, assumptions, and rollout status.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Impact</h2>
+                    <p>Accelerated experimentation velocity by 3x, reduced model deployment friction, and provided a living knowledge base for junior engineers joining the accelerator.</p>
+                </section>
+
+                <section>
+                    <h2>Tech Foundations</h2>
+                    <div class="tech-grid">
+                        <span class="tech-pill">TensorFlow</span>
+                        <span class="tech-pill">scikit-learn</span>
+                        <span class="tech-pill">MLflow</span>
+                        <span class="tech-pill">Weights & Biases</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">Airflow</span>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Explore More</h2>
+                    <div class="action-bar">
+                        <a class="btn ghost image-link" href="https://github.com/DanielDekhtyar/AI-Accelerator" target="_blank" rel="noopener">
+                            <img src="../assets/images/github.png" alt="GitHub" loading="lazy">
+                            View on GitHub
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <div class="page-nav page-nav--bottom">
+            <div class="container">
+                <a class="btn ghost back-home" href="../index.html#projects">&larr; Back to Main Page</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Daniel Dekhtyar.</p>
+            <a href="#top" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <a href="#top" class="floating-top back-to-top" aria-label="Back to top">
+        <span>Back to top</span>
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</body>
+</html>
