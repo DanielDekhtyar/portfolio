@@ -1,125 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Code Finder project case study by Daniel Dekhtyar.">
-    <title>Code Finder | Daniel Dekhtyar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Md9W1xOzbIRbkIuAeGHNirMRqkRkNvztNFVQVw1Gc7YCOUMIqFZ3VAb9YSEuxsjjXNpMOGepQ/HgzQTd2JcH1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <script defer src="../assets/js/main.js"></script>
-</head>
-<body>
-    <header class="site-header" id="top">
-        <div class="container header-inner">
-            <a class="brand" href="../index.html#projects">Daniel Dekhtyar</a>
-            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
-                <span class="sr-only">Toggle navigation</span>
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <nav>
-                <ul id="primary-navigation" class="nav-list">
-                    <li><a href="../index.html#about">About</a></li>
-                    <li><a href="../index.html#projects" class="active">Projects</a></li>
-                    <li><a href="../index.html#education">Education</a></li>
-                    <li><a href="../index.html#certifications">Certifications</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <div class="page-nav">
-            <div class="container">
-                <a class="btn ghost back-home" href="../index.html#projects">&larr; Back to Main Page</a>
-            </div>
-        </div>
-        <section class="project-hero">
-            <div class="container project-layout">
-                <div>
-                    <span class="eyebrow">Project Case Study</span>
-                    <h1>Code Finder</h1>
-                    <p class="lead">An AI-assisted search companion that makes developer onboarding effortless by surfacing the right code snippet, design pattern, or API usage in seconds.</p>
-                </div>
-                <div>
-                    <img class="project-thumb--hero-contain" src="../assets/images/codefinder.png" alt="Code Finder interface with search results grouped by repository" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container project-body">
-                <div class="project-meta">
-                    <span><i class="fa-regular fa-calendar"></i> April 2024 – May 2025</span>
-                    <span><i class="fa-solid fa-user-gear"></i> Role: Full-stack Engineer</span>
-                    <span><i class="fa-solid fa-toolbox"></i> Stack: Python, Flask, PostgreSQL, OpenAI API</span>
-                </div>
-
-                <section>
-                    <h2>Overview</h2>
-                    <p>Code Finder ingests internal Git repositories, indexes symbols, docstrings, commit history, and architectural notes, and exposes a natural-language interface that ranks matches by relevance. It eliminates tribal knowledge silos and accelerates feature delivery.</p>
-                </section>
-
-                <section>
-                    <h2>Highlights</h2>
-                    <ul class="feature-list">
-                        <li>Designed a hybrid vector + keyword ranking engine combining OpenAI embeddings with BM25 for precise contextual matches.</li>
-                        <li>Implemented repository sync workers using Celery and PostgreSQL LISTEN/NOTIFY to stream updates in near real-time.</li>
-                        <li>Crafted an intuitive UI that groups matches by repository, highlights line numbers, and previews surrounding context.</li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Code Finder project case study by Daniel Dekhtyar."
+        />
+        <title>Code Finder | Daniel Dekhtyar</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-Md9W1xOzbIRbkIuAeGHNirMRqkRkNvztNFVQVw1Gc7YCOUMIqFZ3VAb9YSEuxsjjXNpMOGepQ/HgzQTd2JcH1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="icon" type="image/png" href="../assets/images/icon.png" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <script defer src="../assets/js/main.js"></script>
+    </head>
+    <body>
+        <header class="site-header" id="top">
+            <div class="container header-inner">
+                <a class="brand" href="../index.html#projects"
+                    >Daniel Dekhtyar</a
+                >
+                <button
+                    class="nav-toggle"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation"
+                >
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav>
+                    <ul id="primary-navigation" class="nav-list">
+                        <li><a href="../index.html#about">About</a></li>
+                        <li>
+                            <a href="../index.html#projects" class="active"
+                                >Projects</a
+                            >
+                        </li>
+                        <li><a href="../index.html#education">Education</a></li>
+                        <li>
+                            <a href="../index.html#certifications"
+                                >Certifications</a
+                            >
+                        </li>
+                        <li><a href="../index.html#contact">Contact</a></li>
                     </ul>
-                </section>
-
-                <section>
-                    <h2>Impact</h2>
-                    <p>Reduced onboarding time by 35% for new engineers, enabled cross-team knowledge sharing, and established a knowledge base that ties code references directly to product documentation.</p>
-                </section>
-
-                <section>
-                    <h2>Tech Foundations</h2>
-                    <div class="tech-grid">
-                        <span class="tech-pill">Flask</span>
-                        <span class="tech-pill">SQLAlchemy</span>
-                        <span class="tech-pill">OpenAI Embeddings</span>
-                        <span class="tech-pill">ElasticSearch</span>
-                        <span class="tech-pill">TypeScript</span>
-                        <span class="tech-pill">TailwindCSS</span>
-                    </div>
-                </section>
-
-                <section>
-                    <h2>Explore More</h2>
-                    <div class="action-bar">
-                        <a class="btn primary" href="https://web.archive.org/web/20250429220846/https://codefinder.dev/" target="_blank" rel="noopener">Launch Live Demo</a>
-                        <a class="btn ghost image-link" href="https://github.com/DanielDekhtyar/CodeFinder" target="_blank" rel="noopener">
-                            <img src="../assets/images/github.png" alt="GitHub" loading="lazy">
-                            View on GitHub
-                        </a>
-                    </div>
-                </section>
+                </nav>
             </div>
-        </section>
+        </header>
 
-        <div class="page-nav page-nav--bottom">
-            <div class="container">
-                <a class="btn ghost back-home" href="../index.html#projects">&larr; Back to Main Page</a>
+        <main>
+            <div class="page-nav">
+                <div class="container">
+                    <a class="btn ghost back-home" href="../index.html#projects"
+                        >&larr; Back to Main Page</a
+                    >
+                </div>
             </div>
-        </div>
-    </main>
+            <section class="project-hero">
+                <div class="container project-layout">
+                    <div>
+                        <span class="eyebrow">Project Case Study</span>
+                        <h1>Code Finder</h1>
+                        <p class="lead">
+                            An AI-assisted search companion that makes developer
+                            onboarding effortless by surfacing the right code
+                            snippet, design pattern, or API usage in seconds.
+                        </p>
+                    </div>
+                    <div>
+                        <img
+                            class="project-thumb--hero-contain"
+                            src="../assets/images/codefinder.png"
+                            alt="Code Finder interface with search results grouped by repository"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            </section>
 
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; <span id="year"></span> Daniel Dekhtyar.</p>
-            <a href="#top" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
-        </div>
-    </footer>
+            <section class="section">
+                <div class="container project-body">
+                    <div class="project-meta">
+                        <span
+                            ><i class="fa-regular fa-calendar"></i> April 2024 –
+                            May 2025</span
+                        >
+                        <span
+                            ><i class="fa-solid fa-user-gear"></i> Role:
+                            Full-stack Engineer</span
+                        >
+                        <span
+                            ><i class="fa-solid fa-toolbox"></i> Stack: Python,
+                            Flask, PostgreSQL, OpenAI API</span
+                        >
+                    </div>
 
-    <a href="#top" class="floating-top back-to-top" aria-label="Back to top">
-        <span>Back to top</span>
-        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-    </a>
-</body>
+                    <section>
+                        <h2>Overview</h2>
+                        <p>
+                            Code Finder ingests internal Git repositories,
+                            indexes symbols, docstrings, commit history, and
+                            architectural notes, and exposes a natural-language
+                            interface that ranks matches by relevance. It
+                            eliminates tribal knowledge silos and accelerates
+                            feature delivery.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Highlights</h2>
+                        <ul class="feature-list">
+                            <li>
+                                Designed a hybrid vector + keyword ranking
+                                engine combining OpenAI embeddings with BM25 for
+                                precise contextual matches.
+                            </li>
+                            <li>
+                                Implemented repository sync workers using Celery
+                                and PostgreSQL LISTEN/NOTIFY to stream updates
+                                in near real-time.
+                            </li>
+                            <li>
+                                Crafted an intuitive UI that groups matches by
+                                repository, highlights line numbers, and
+                                previews surrounding context.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Impact</h2>
+                        <p>
+                            Reduced onboarding time by 35% for new engineers,
+                            enabled cross-team knowledge sharing, and
+                            established a knowledge base that ties code
+                            references directly to product documentation.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Tech Foundations</h2>
+                        <div class="tech-grid">
+                            <span class="tech-pill">Flask</span>
+                            <span class="tech-pill">SQLAlchemy</span>
+                            <span class="tech-pill">OpenAI Embeddings</span>
+                            <span class="tech-pill">ElasticSearch</span>
+                            <span class="tech-pill">TypeScript</span>
+                            <span class="tech-pill">TailwindCSS</span>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Explore More</h2>
+                        <div class="action-bar">
+                            <a
+                                class="btn primary"
+                                href="https://web.archive.org/web/20250429220846/https://codefinder.dev/"
+                                target="_blank"
+                                rel="noopener"
+                                >Launch Live Demo</a
+                            >
+                            <a
+                                class="btn ghost image-link"
+                                href="https://github.com/DanielDekhtyar/CodeFinder"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <img
+                                    src="../assets/images/github.png"
+                                    alt="GitHub"
+                                    loading="lazy"
+                                />
+                                View on GitHub
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <div class="page-nav page-nav--bottom">
+                <div class="container">
+                    <a class="btn ghost back-home" href="../index.html#projects"
+                        >&larr; Back to Main Page</a
+                    >
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>&copy; <span id="year"></span> Daniel Dekhtyar.</p>
+            </div>
+        </footer>
+
+        <a
+            href="#top"
+            class="floating-top back-to-top"
+            aria-label="Back to top"
+        >
+            <span>Back to top</span>
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+    </body>
 </html>

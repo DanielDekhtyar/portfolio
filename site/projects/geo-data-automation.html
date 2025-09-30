@@ -1,122 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Geo-Data Processing Automation project by Daniel Dekhtyar.">
-    <title>Geo-Data Processing Automation | Daniel Dekhtyar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Md9W1xOzbIRbkIuAeGHNirMRqkRkNvztNFVQVw1Gc7YCOUMIqFZ3VAb9YSEuxsjjXNpMOGepQ/HgzQTd2JcH1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <script defer src="../assets/js/main.js"></script>
-</head>
-<body>
-    <header class="site-header" id="top">
-        <div class="container header-inner">
-            <a class="brand" href="../index.html#projects">Daniel Dekhtyar</a>
-            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
-                <span class="sr-only">Toggle navigation</span>
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <nav>
-                <ul id="primary-navigation" class="nav-list">
-                    <li><a href="../index.html#about">About</a></li>
-                    <li><a href="../index.html#projects" class="active">Projects</a></li>
-                    <li><a href="../index.html#education">Education</a></li>
-                    <li><a href="../index.html#certifications">Certifications</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <div class="page-nav">
-            <div class="container">
-                <a class="btn ghost back-home" href="../index.html#projects">&larr; Back to Main Page</a>
-            </div>
-        </div>
-        <section class="project-hero">
-            <div class="container project-layout">
-                <div>
-                    <span class="eyebrow">Project Case Study</span>
-                    <h1>Geo-Data Processing Automation</h1>
-                    <p class="lead">A mission-critical Python automation that transformed recurring Israeli Air Force geo-spatial reporting—from 12+ hours of manual work to seconds.</p>
-                </div>
-                <div>
-                    <img src="../assets/images/geo-data-automation.svg" alt="Visualization of automated geo-data workflows" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container project-body">
-                <div class="project-meta">
-                    <span><i class="fa-regular fa-calendar"></i> September 2023 – December 2023</span>
-                    <span><i class="fa-solid fa-user-gear"></i> Role: Automation Engineer</span>
-                    <span><i class="fa-solid fa-building-shield"></i> Partner: Israeli Air Force</span>
-                    <span><i class="fa-solid fa-toolbox"></i> Stack: Python, openpyxl, python-docx, Pytest</span>
-                </div>
-
-                <section>
-                    <h2>Overview</h2>
-                    <p>During my service with the Israeli Air Force, I owned the automation of a sensitive geo-spatial reporting workflow. Analysts previously spent 12–15 hours copying coordinates, metadata, and operational labels between Excel and Word templates. I engineered a Python-based converter that ingests the raw Excel workbook, applies validation and transformation rules, and exports a mission-ready Word intelligence brief in seconds.</p>
-                </section>
-
-                <section>
-                    <h2>Highlights</h2>
-                    <ul class="feature-list">
-                        <li>Designed a resilient parser with <code>openpyxl</code> that normalized inconsistent sheet formats and safeguarded against empty or malformed cells.</li>
-                        <li>Generated standardized Word intelligence dossiers using <code>python-docx</code>, automatically embedding annotated maps, headers, and operational summaries.</li>
-                        <li>Implemented a Pytest regression harness replicating historical datasets to guarantee that every code change preserved the integrity of the delivered reports.</li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Geo-Data Automation for the Israeli Air Force project by Daniel Dekhtyar."
+        />
+        <title>
+            Geo-Data Automation for the Israeli Air Force | Daniel Dekhtyar
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-Md9W1xOzbIRbkIuAeGHNirMRqkRkNvztNFVQVw1Gc7YCOUMIqFZ3VAb9YSEuxsjjXNpMOGepQ/HgzQTd2JcH1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="icon" type="image/png" href="../assets/images/icon.png" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <script defer src="../assets/js/main.js"></script>
+    </head>
+    <body>
+        <header class="site-header" id="top">
+            <div class="container header-inner">
+                <a class="brand" href="../index.html#projects"
+                    >Daniel Dekhtyar</a
+                >
+                <button
+                    class="nav-toggle"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation"
+                >
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav>
+                    <ul id="primary-navigation" class="nav-list">
+                        <li><a href="../index.html#about">About</a></li>
+                        <li>
+                            <a href="../index.html#projects" class="active"
+                                >Projects</a
+                            >
+                        </li>
+                        <li><a href="../index.html#education">Education</a></li>
+                        <li>
+                            <a href="../index.html#certifications"
+                                >Certifications</a
+                            >
+                        </li>
+                        <li><a href="../index.html#contact">Contact</a></li>
                     </ul>
-                </section>
-
-                <section>
-                    <h2>Impact</h2>
-                    <p>The automation reduced delivery time per report from half a day to seconds, saving an estimated 250 labor hours in the first six months. Operators reallocated that time toward higher-value mission analysis while trusting that the generated documents were complete, accurate, and audit-ready.</p>
-                </section>
-
-                <section>
-                    <h2>Tech Foundations</h2>
-                    <div class="tech-grid">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">openpyxl</span>
-                        <span class="tech-pill">python-docx</span>
-                        <span class="tech-pill">Pytest</span>
-                        <span class="tech-pill">Automation Pipelines</span>
-                        <span class="tech-pill">Reporting</span>
-                    </div>
-                </section>
-
-                <section>
-                    <h2>Explore More</h2>
-                    <div class="action-bar">
-                        <a class="btn ghost" href="../Daniel%20Dekhtyar%20CV.pdf" target="_blank" rel="noopener">View Résumé</a>
-                    </div>
-                </section>
+                </nav>
             </div>
-        </section>
+        </header>
 
-        <div class="page-nav page-nav--bottom">
-            <div class="container">
-                <a class="btn ghost back-home" href="../index.html#projects">&larr; Back to Main Page</a>
+        <main>
+            <div class="page-nav">
+                <div class="container">
+                    <a class="btn ghost back-home" href="../index.html#projects"
+                        >&larr; Back to Main Page</a
+                    >
+                </div>
             </div>
-        </div>
-    </main>
+            <section class="project-hero">
+                <div class="container project-layout">
+                    <div>
+                        <span class="eyebrow">Project Case Study</span>
+                        <h1>Geo-Data Automation for the Israeli Air Force</h1>
+                        <p class="lead">
+                            A mission-critical Python automation that
+                            transformed recurring Israeli Air Force geo-spatial
+                            reporting—from 12+ hours of manual work to seconds.
+                        </p>
+                    </div>
+                    <div>
+                        <img
+                            class="project-hero-logo"
+                            src="../assets/images/IAF_logo.png"
+                            alt="Israeli Air Force emblem for the geo-data automation project"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            </section>
 
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; <span id="year"></span> Daniel Dekhtyar.</p>
-            <a href="#top" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
-        </div>
-    </footer>
+            <section class="section">
+                <div class="container project-body">
+                    <div class="project-meta">
+                        <span
+                            ><i class="fa-regular fa-calendar"></i> September
+                            2023 – December 2023</span
+                        >
+                        <span
+                            ><i class="fa-solid fa-user-gear"></i> Role:
+                            Automation Engineer</span
+                        >
+                        <span
+                            ><i class="fa-solid fa-building-shield"></i>
+                            Partner: Israeli Air Force</span
+                        >
+                        <span
+                            ><i class="fa-solid fa-toolbox"></i> Stack: Python,
+                            openpyxl, python-docx, Pytest</span
+                        >
+                    </div>
 
-    <a href="#top" class="floating-top back-to-top" aria-label="Back to top">
-        <span>Back to top</span>
-        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-    </a>
-</body>
+                    <section>
+                        <h2>Overview</h2>
+                        <p>
+                            During my service with the Israeli Air Force, I
+                            owned the automation of a sensitive geo-spatial
+                            reporting workflow. Analysts previously spent 12–15
+                            hours copying coordinates, metadata, and operational
+                            labels between Excel and Word templates. I
+                            engineered a Python-based converter that ingests the
+                            raw Excel workbook, applies validation and
+                            transformation rules, and exports a mission-ready
+                            Word intelligence brief in seconds.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Highlights</h2>
+                        <ul class="feature-list">
+                            <li>
+                                Designed a resilient parser with
+                                <code>openpyxl</code> that normalized
+                                inconsistent sheet formats and safeguarded
+                                against empty or malformed cells.
+                            </li>
+                            <li>
+                                Generated standardized Word intelligence
+                                dossiers using <code>python-docx</code>,
+                                automatically embedding annotated maps, headers,
+                                and operational summaries.
+                            </li>
+                            <li>
+                                Implemented a Pytest regression harness
+                                replicating historical datasets to guarantee
+                                that every code change preserved the integrity
+                                of the delivered reports.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Impact</h2>
+                        <p>
+                            The automation reduced delivery time per report from
+                            half a day to seconds, saving an estimated 250 labor
+                            hours in the first six months. Operators reallocated
+                            that time toward higher-value mission analysis while
+                            trusting that the generated documents were complete,
+                            accurate, and audit-ready.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Tech Foundations</h2>
+                        <div class="tech-grid">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">openpyxl</span>
+                            <span class="tech-pill">python-docx</span>
+                            <span class="tech-pill">Pytest</span>
+                            <span class="tech-pill">Automation Pipelines</span>
+                            <span class="tech-pill">Reporting</span>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Explore More</h2>
+                        <div class="action-bar">
+                            <a
+                                class="btn ghost"
+                                href="../Daniel%20Dekhtyar%20CV.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                >View Résumé</a
+                            >
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <div class="page-nav page-nav--bottom">
+                <div class="container">
+                    <a class="btn ghost back-home" href="../index.html#projects"
+                        >&larr; Back to Main Page</a
+                    >
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>&copy; <span id="year"></span> Daniel Dekhtyar.</p>
+            </div>
+        </footer>
+
+        <a
+            href="#top"
+            class="floating-top back-to-top"
+            aria-label="Back to top"
+        >
+            <span>Back to top</span>
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+    </body>
 </html>
