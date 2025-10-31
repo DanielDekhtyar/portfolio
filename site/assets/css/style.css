@@ -391,6 +391,7 @@ h4 {
 .project-card {
     height: 100%;
     position: relative;
+    cursor: pointer;
 }
 
 .project-card::before {

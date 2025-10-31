@@ -616,5 +616,26 @@
             <span>Back to top</span>
             <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
         </a>
+
+        <script>
+        // Make project cards clickable
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach((card) => {
+                card.addEventListener('click', (event) => {
+                    // Don't trigger if clicking on a link or button
+                    if (event.target.closest('a, button')) {
+                        return;
+                    }
+                    
+                    // Find the "Project Details" link
+                    const detailsLink = card.querySelector('.btn.primary[href^="site/projects/"]');
+                    if (detailsLink) {
+                        window.location.href = detailsLink.getAttribute('href');
+                    }
+                });
+            });
+        });
+        </script>
     </body>
 </html>

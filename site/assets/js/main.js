@@ -71,4 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   toggleFloatingTop();
   window.addEventListener('scroll', toggleFloatingTop, { passive: true });
+
+  // Make project cards clickable
+  const projectCards = document.querySelectorAll('.project-card');
+  projectCards.forEach((card) => {
+    card.addEventListener('click', (event) => {
+      // Don't trigger if clicking on a link or button
+      if (event.target.closest('a, button')) {
+        return;
+      }
+      
+      // Find the "Project Details" link
+      const detailsLink = card.querySelector('.btn.primary[href^="projects/"]');
+      if (detailsLink) {
+        window.location.href = detailsLink.getAttribute('href');
+      }
+    });
+  });
 });
